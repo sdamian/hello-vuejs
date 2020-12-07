@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">
+      <label>Name:</label>
+      <input type="text" v-model="yourName" />
+      <h2 v-if="yourName">Hello {{yourName}}!</h2>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.0.4"></script>
+    <script>
+      var app = Vue.createApp({
+        data: function () {
+          return {
+            yourName: "",
+          };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
